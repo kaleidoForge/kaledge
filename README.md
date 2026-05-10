@@ -39,10 +39,6 @@ kaledge/
 │   └── build-agent-setup.md   # Setup guide for local/remote Vivado Build Agents
 ```
 
-<p align="center">
-  <img src="img/app_workflow.png" alt="KalEdge End-to-End Workflow" width="800">
-</p>
-
 ---
 
 ## Getting Started
