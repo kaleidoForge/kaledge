@@ -186,7 +186,8 @@
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright [yyyy] [name of copyright owner]
+      Copyright [yyyy] [name of copyright owner]
+
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -199,3 +200,10 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+## Clarification of Scope & Proprietary SaaS Platform
+
+This license (Apache 2.0) applies exclusively to the open-source scripts, documentation, tutorials, and helper tools contained within this specific GitHub repository (including, but not limited to, local monitoring scripts like `hw_monitor.py` and example notebooks).
+
+This license DOES NOT apply to the KalEdge Cloud Platform, its proprietary orchestration engine, backend services, database structures, web application dashboard, or any related SaaS products hosted at kaledge.com (or its subdomains). The hosted cloud software remains closed-source, proprietary commercial software owned exclusively by KaleidoForge. Unauthorized copying, modification, or redistribution of the hosted platform's code or design is strictly prohibited.
+
