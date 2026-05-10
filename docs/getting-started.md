@@ -28,7 +28,7 @@ Navigate to the **Architecture** tab:
 1.  **Define your layers:** Write your sequential Keras model in Python syntax or select a pre-built template.
 2.  **Use AI Architect (Supporter & Above):** 
     *   If you have a Supporter plan or higher, make sure to paste your **Anthropic API Key** in the **AI Configuration** panel in the sidebar.
-    *   Open the **AI Architect** section, describe the network you want to build in plain English (e.g., *"A 1D convolutional neural network for 16-channel spectrum classification with 3 classes"*), and click **Generate**.
+    *   Open the **AI Architect** section, describe the network you want to build in plain English (e.g., *"A dense neural network with two hidden layers for 10-class MNIST digit classification"*), and click **Generate**.
     *   The agent will generate a floating-point **Baseline** model, a compressed **Student** model, and a quantized **QKeras** model.
     *   Review the code and the beautiful interactive SVG layer charts, then click **Apply** to load the selected model directly into your active workspace.
 
