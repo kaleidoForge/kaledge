@@ -16,7 +16,7 @@
       other entities that control, are controlled by, or are under common
       control with that entity. For the purposes of this definition,
       "control" means (i) the power, direct or indirect, to cause the
-      direction or management of such entity, whether by contract or
+      direction of management of such entity, whether by contract or
       otherwise, or (ii) ownership of fifty percent (50%) or more of the
       outstanding shares, or (iii) beneficial ownership of such entity.
 
@@ -186,7 +186,7 @@
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-      Copyright [yyyy] [name of copyright owner]
+      Copyright 2025-2026 KaleidoForge (Romina Soledad Molina)
 
 
    Licensed under the Apache License, Version 2.0 (the "License");
@@ -203,7 +203,6 @@
 
 ## Clarification of Scope & Proprietary SaaS Platform
 
-This license (Apache 2.0) applies exclusively to the open-source scripts, documentation, tutorials, and helper tools contained within this specific GitHub repository (including, but not limited to, local monitoring scripts like `hw_monitor.py` and example notebooks).
+This license (Apache 2.0) applies exclusively to the open-source scripts, documentation, tutorials, and helper tools contained within this specific GitHub repository (including, but not limited to, example scripts and notebooks).
 
-This license DOES NOT apply to the KalEdge Cloud Platform, its proprietary orchestration engine, backend services, database structures, web application dashboard, or any related SaaS products hosted at kaledge.com (or its subdomains). The hosted cloud software remains closed-source, proprietary commercial software owned exclusively by KaleidoForge. Unauthorized copying, modification, or redistribution of the hosted platform's code or design is strictly prohibited.
-
+This license DOES NOT apply to the KalEdge Cloud Platform, its proprietary orchestration engine, backend services, database structures, web application dashboard, or any related SaaS products hosted at kaledge.kaleidoforge.com (or its subdomains). The hosted cloud software remains closed-source, proprietary commercial software owned exclusively by KaleidoForge. Unauthorized copying, modification, or redistribution of the hosted platform's code or design is strictly prohibited.
