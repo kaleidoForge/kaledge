@@ -43,7 +43,7 @@ Navigate to the **Training** (Baseline) tab:
 
 ---
 
-## 5. Optimize and Compress (Knowledge Distillation, Pruning, & QKeras Quantization)
+# 5. Optimize and Compress (Knowledge Distillation, Pruning, & Quantization)
 To fit your model onto an FPGA and make it extremely fast, you must structurally and numerically compress its weight footprint:
 *   **Knowledge Distillation (Developer/Pro):** Navigate to the **Knowledge Distillation** tab to train your lightweight "Student" model, forcing it to mimic the outputs of your high-accuracy "Teacher" baseline.
 *   **Pruning & QAP (All Tiers):** Run weight pruning via TF-MOT to drive redundant connection weights to zero. You can also run **Quantization-Aware Pruning (QAP)** to jointly prune and quantize weights simultaneously, achieving maximum hardware efficiency.
