@@ -7,10 +7,10 @@ Welcome to **KalEdge**! This guide will take you step-by-step from creating an a
 ## 1. Create an Account and Select your Plan
 1.  Navigate to [kaledge.kaleidoforge.com](https://kaledge.kaleidoforge.com) and click **Sign Up**.
 2.  Select a subscription tier that fits your needs:
-    *   **Hobbyist (Free):** Great for learning and testing basic models with native datasets.
-    *   **Supporter (€12/mo):** Perfect for personal projects. Includes custom CSV uploads, PDF analytics reports, TF-MOT pruning, and the conversational **AI Architect** (BYOK).
-    *   **Developer (€49/mo):** Ideal for universities and training. Adds Knowledge Distillation (KD), and QKeras quantization.
-    *   **Pro (€149/mo):** Complete end-to-end suite. Unlocks the automatic FPGA Estimator, remote Xilinx Build Agent synthesis (under development), IP Wrapper generation, and full priority build pipelines.
+    *   **Hobbyist:** Great for learning and testing basic models with native datasets.
+    *   **Supporter:** Perfect for personal projects. Includes custom CSV uploads, PDF analytics reports, TF-MOT pruning, and the conversational **AI Architect** (BYOK).
+    *   **Developer:** Ideal for universities and training. Adds Knowledge Distillation (KD), and QKeras quantization.
+    *   **Pro:** Complete end-to-end suite. Unlocks the automatic FPGA Estimator, remote Xilinx Build Agent synthesis (under development), IP Wrapper generation, and full priority build pipelines.
 
 ---
 
