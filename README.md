@@ -45,7 +45,7 @@ kaledge/
 
 1.  **Register:** Create your account at [kaledge.kaleidoforge.com](https://kaledge.kaleidoforge.com) (Choose from Hobbyist, Supporter, Developer, or Pro tiers).
 2.  **Upload Datasets:** Upload your data in a supported `.csv` format (see [Dataset Format Guide](docs/dataset-format.md)) or load native datasets (MNIST, CIFAR-10).
-3.  **Configure AI Architect:** If you are on the **Supporter** tier or higher, enter your Anthropic API Key in the sidebar to unlock conversational network design.
+3.  **Configure AI Architect:** Enter your Anthropic API Key in the sidebar to unlock conversational network design.
 4.  **Train & Compress:** Establish your baseline accuracy ceiling, run knowledge distillation, prune redundant weights, and quantize the model down to custom bit precision.
 5.  **Estimate Resources:** Use the **Surrogate Resource Estimator** (currently in Beta and under testing) to predict hardware occupancy (LUTs, DSPs, FFs, BRAMs) against hardware constraints before launching synthesis.
 6.  **Simulate & Synthesize:** Convert the model using the **hls4ml** tab, verify bit-accurate simulation results, and export your synthesizable HLS project (with optional **AXI4-Stream / DMA** IP wrapper support). Automatic Bitstream synthesis via the local Build Agent is currently under development for Pro accounts.
