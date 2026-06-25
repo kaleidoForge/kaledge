@@ -1,6 +1,6 @@
 # KalEdge: AI Optimization and Deployment for FPGAs
 
-KalEdge is a machine learning platform designed to bridge the gap between high-level Deep Learning model design and efficient hardware (FPGA) implementation. Powered by **hls4ml**, KalEdge adds layers of automation, AI-assisted optimization, and remote hardware synthesis workflows to make Edge AI accessible to software engineers and hardware designers alike.
+KalEdge is a platform designed to bridge the gap between high-level Deep Learning model design and efficient hardware (FPGA) implementation. Powered by **hls4ml**, KalEdge adds layers of automation, AI-assisted optimization, and remote hardware synthesis workflows to make Edge AI accessible to software engineers and hardware designers alike.
 
 Official Cloud Platform: [kaledge.kaleidoforge.com](https://kaledge.kaleidoforge.com)  
 Documentation Portal: [GitHub Repository](https://github.com/kaleidoforge/kaledge)
