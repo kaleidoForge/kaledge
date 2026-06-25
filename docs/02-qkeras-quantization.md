@@ -32,14 +32,6 @@ QActivation("softmax")
     tf.keras.layers.Activation("softmax")
     ```
 
-### 3. Avoid `alpha=1` parameter in Quantizers
-While QKeras allows the scaling parameter `alpha=1` inside `quantized_bits`, hls4ml parser structures are optimized for standard bit/integer parameters. Omit `alpha` to prevent compatibility hiccups.
-
-*   **Avoid:** `quantized_bits(6, 0, alpha=1)`
-*   **Use:** `quantized_bits(6, 0)`
-
----
-
 ## Recommended Bit Precision (Fixed-Point Format)
 
 In fixed-point math, numbers are represented as `ap_fixed<W, I>`, where:
