@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KalEdge | Hands-on Exercises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --secondary: #1E1B4B;
+            --text: #374151;
+            --bg: #F9FAFB;
+            --accent: #6366F1;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: var(--secondary);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: -0.02em;
+        }
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: var(--secondary);
+            border-bottom: 2px solid #E5E7EB;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h3 {
+            color: var(--primary);
+            margin-top: 25px;
+        }
+        .exercise-step {
+            background-color: #F8FAFC;
+            border-left: 4px solid var(--accent);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .tip-box {
+            background-color: #EEF2FF;
+            border: 1px solid #C7D2FE;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+        .tip-box strong {
+            color: var(--primary);
+        }
+        .question-box {
+            background-color: #F0FDF4;
+            border: 1px dashed #BBF7D0;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .question-box strong {
+            color: #15803D;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #6B7280;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Training & Compression</h1>
+        <p>Hands-on Exercises with KalEdge</p>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h2>Learning Objectives</h2>
+            <p>By completing this sequence of hands-on exercises, participants will learn to:</p>
+            <ul>
+                <li><strong>Understand Training Dynamics:</strong> Evaluate the impact of hyperparameters (learning rate, epochs, optimizers) on baseline neural networks.</li>
+                <li><strong>Explore Structured Pruning:</strong> Apply physical sparsity-based tuning to remove weights and observe hardware-accuracy tradeoffs.</li>
+                <li><strong>Master Quantization (QAT):</strong> Utilize QKeras for precision-aware training to dramatically shrink model footprints inside FPGAs.</li>
+                <li><strong>Analyze Linear Factorization:</strong> Deploy Single Value Decomposition (Low Rank/SVD) to reduce Dense layer parameters efficiently.</li>
+                <li><strong>Evaluate Edge Readiness:</strong> Interpret the KalEdge pipeline scores, comparing composite metrics across Accuracy versus Embedded hardware priorities.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Introduction</h2>
+            <p>Use the standalone training tabs to complete each exercise. Ensure you have the correct dataset and architecture loaded before starting.</p>
+            
+            <h3>Preparation</h3>
+            <ul>
+                <li><strong>Dataset</strong>: Use MNIST. Set Input dropdown to <em>MLP (Flatten)</em>.</li>
+                <li><strong>Architecture</strong>: Go to Architecture tab, select Baseline, click <em>Save</em> and <em>Load into Pipeline</em>.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Part 1: Baseline Training</h2>
+            
+            <h3>1.1 Effect of learning rate</h3>
+            <p>Train the baseline model three times with different learning rates (epochs = 20, batch = 32, optimizer = Adam):</p>
+            <ul>
+                <li>Run 1: LR = 1e-2</li>
+                <li>Run 2: LR = 1e-3</li>
+                <li>Run 3: LR = 1e-4</li>
+            </ul>
+            
+            <div class="question-box">
+                <strong>Q1:</strong> Which learning rate converged fastest? Which one produced the best final validation accuracy?
+            </div>
+            
+            <div class="tip-box">
+                <strong>Tip:</strong> Watch the Loss curve. A zigzag pattern means LR is too high. A nearly flat curve at the start means LR is too low.
+            </div>
+
+            <h3>1.2 Epochs and overfitting</h3>
+            <p>Train with LR = 1e-3, batch = 32, Adam, and experiment with epochs:</p>
+            <ul>
+                <li>Run 1: epochs = 10</li>
+                <li>Run 2: epochs = 50</li>
+                <li>Run 3: epochs = 100</li>
+            </ul>
+
+            <div class="question-box">
+                <strong>Q2:</strong> At what epoch does the gap between train accuracy and val accuracy start to grow? What does this indicate?
+            </div>
+
+            <div class="tip-box">
+                <strong>Tip:</strong> In KalEdge Lite, the Accuracy plot shows both curves. Look for the point where the blue (val) line flattens while the purple (train) line continues rising.
+            </div>
+
+            <h3>1.3 Optimizer comparison</h3>
+            <p>Train with LR = 1e-3, epochs = 30, batch = 32. Compare:</p>
+            <ul>
+                <li>Adam</li>
+                <li>SGD (Try with momentum = 0.9)</li>
+                <li>RMSprop</li>
+            </ul>
+
+            <div class="question-box">
+                <strong>Q3:</strong> Which optimizer reached the highest validation accuracy? Which was the most stable?
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Part 2: Pruning</h2>
+            <p>Use the <strong>Training → Pruning</strong> tab. Select <em>From Scratch</em> mode.</p>
+
+            <h3>2.1 Sparsity vs accuracy tradeoff</h3>
+            <p>Train baseline (30 epochs, Adam, LR = 1e-3) and apply pruning levels:</p>
+            <ul>
+                <li>Sparsity = 0.3 (30% zeroed)</li>
+                <li>Sparsity = 0.5 (50%)</li>
+                <li>Sparsity = 0.8 (80%)</li>
+            </ul>
+
+            <div class="question-box">
+                <strong>Q4:</strong> At what sparsity level does the accuracy drop significantly?
+            </div>
+
+            <div class="tip-box">
+                <strong>Tip:</strong> Check the Sparsity metric in the model metrics panel after training.
+            </div>
+
+            <h3>2.2 Training epochs with pruning schedule</h3>
+            <p>Fix sparsity = 0.5 and vary epochs: 5, 15, and 30.</p>
+
+            <div class="question-box">
+                <strong>Q5:</strong> How does the number of epochs affect the final accuracy when training with a pruning schedule?
+            </div>
+
+            <h3>2.3 Structured vs Unstructured Pruning</h3>
+            <p>Compare unstructured pruning (random weights to zero) with <strong>Structured Pruning (L1-norm)</strong> which removes entire neurons/channels.</p>
+            <ul>
+                <li>Run 1: Unstructured Pruning at 50% sparsity.</li>
+                <li>Run 2: Structured Pruning (L1-norm) at 50% sparsity.</li>
+            </ul>
+            <div class="question-box">
+                <strong>Q6:</strong> Check the Dual FPGA Estimator (Radar plots) after generating the HLS reports. Which pruning method actually reduced the estimated DSPs and BRAMs? Why?
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Part 3: QAT / QAP with Qkeras</h2>
+            <div class="exercise-step">
+                1. Navigate to <strong>Training → QAP (QKeras)</strong> tab<br>
+                2. Configure the target bit-widths directly from the precision options<br>
+                3. Click Train to automatically build and optimize the quantized model
+            </div>
+
+            <h3>3.1 Bit-width and accuracy</h3>
+            <p>Run QAT (20 epochs, Adam, LR = 1e-3, 0 sparsity). Compare bit configurations:</p>
+            <ul>
+                <li>8 bits, 4 int bits (ap_fixed&lt;8,4&gt;)</li>
+                <li>4 bits, 2 int bits (ap_fixed&lt;4,2&gt;)</li>
+                <li>2 bits, 1 int bits (ap_fixed&lt;2,1&gt;)</li>
+            </ul>
+
+            <div class="question-box">
+                <strong>Q7:</strong> How does reducing the bit-width affect accuracy?
+            </div>
+
+            <h3>3.2 Combining quantization and pruning</h3>
+            <p>Fix bits = 8, int bits = 4, epochs = 20. Vary sparsity in the Pruning tab: 0.0, 0.4, and 0.6.</p>
+
+            <div class="question-box">
+                <strong>Q8:</strong> Does adding pruning on top of quantization hurt accuracy more than each technique alone?
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Part 4: Knowledge Distillation (KD)</h2>
+            <p>Use the <strong>Training → Distillation</strong> tab to train a smaller "Student" model using the predictions of a pre-trained Baseline "Teacher".</p>
+            
+            <h3>4.1 Temperature Scaling</h3>
+            <p>Distillation relies on softening the Teacher's probabilities to reveal dark knowledge. Train the Student model using different Temperature values:</p>
+            <ul>
+                <li>Run 1: Temperature = 1 (Standard categorical cross-entropy)</li>
+                <li>Run 2: Temperature = 5</li>
+                <li>Run 3: Temperature = 20</li>
+            </ul>
+            
+            <div class="question-box">
+                <strong>Q9:</strong> How does increasing the Temperature affect the Student's learning stability and final accuracy compared to training it from scratch?
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Part 5: Model Comparison & Score</h2>
+            <p>Load both Student and QKeras architectures, then run <strong>KD → QAP (QKeras)</strong> in the Pipeline tab.</p>
+
+            <h3>5.1 Score priorities</h3>
+            <p>Observe the comparison table and change presets: <em>Accuracy</em>, <em>FPGA</em>, and <em>Embedded</em>.</p>
+
+            <div class="question-box">
+                <strong>Q10:</strong> Does the same model win under all three presets? What does this tell you about the tradeoffs?
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Part 6: Low Rank Factorization (SVD)</h2>
+            <p>Use the <strong>Training → Low Rank</strong> tab. This technique factorizes Dense layers into smaller matrices to reduce parameters.</p>
+
+            <h3>6.1 Parameter reduction vs Accuracy</h3>
+            <p>Experiment with different compression ranks or target reduction percentages:</p>
+            <ul>
+                <li>Rank 1: Minimal compression (Keep most weights)</li>
+                <li>Rank 2: Aggressive compression (Strong factor decomposition)</li>
+            </ul>
+
+            <div class="question-box">
+                <strong>Q11:</strong> Compare the Parameter Count of the SVD-optimized model vs. the original Baseline. What is the percentage of reduction?
+            </div>
+
+            <div class="tip-box">
+                <strong>Tip:</strong> Matrix decomposition is particularly effective on large Dense/Linear layers. Watch the Parameter Count in the comparison panel to evaluate the impact.
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>KaleidoForge: Lightning Bridges for Fast AI</p>
+        <p>© 2025–2026 KalEdge | All rights reserved.</p>
+    </div>
+</body>
+</html>
