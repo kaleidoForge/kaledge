@@ -56,9 +56,12 @@ kaledge/
 
 ## Licensing
 
-The scripts, documentation, and tools in this repository are open-sourced under the **Apache License 2.0**. 
+The scripts, documentation, and tools in this repository are open-sourced under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
 
-*Please note that this license **does not** apply to the core KalEdge Cloud Platform SaaS backend, its databases, or its proprietary cloud dashboard, which remain closed-source commercial assets of KaleidoForge.* See the [LICENSE](LICENSE) file for complete scope details.
+This means you are free to use, modify, and distribute this software, but any modified version used to provide a network service must also be released under the same license.
+
+*Please note that this license **does not** apply to the core KalEdge Pro/Corp platform, its proprietary estimators, build servers, or enterprise delivery assets, which remain closed-source commercial products of KaleidoForge.* See the [LICENSE](LICENSE) file for complete scope details.
+
 
 ---
 *© 2025–2026 KaleidoForge | Lightning Bridges for Fast AI*
