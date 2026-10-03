@@ -35,22 +35,22 @@ KalEdge follows an **Open-Core** distribution strategy:
 | **Pro / Corp** | Institutional delivery | Hardware-bound license | All Community features + FPGA estimators, Build Agent, AI Advisor |
 
 ---
-
-## Running KalEdge Community (Docker)
-
-The Community edition is distributed as a Docker image. It requires a free account at [kaledge.kaleidoforge.com](https://kaledge.kaleidoforge.com) to log in.
-
-### Pull and run
-
-```bash
-docker pull ghcr.io/kaleidoforge/kaledge-community:latest
-
-docker run -p 8080:8080 ghcr.io/kaleidoforge/kaledge-community:latest
-```
-
-Then open your browser at `http://localhost:8080` and log in with your KalEdge account.
-
----
+1. 
+2. ## Running KalEdge Community (Docker)
+3. 
+4. The Community edition is distributed as a Docker image. It requires a free account at [kaledge.kaleidoforge.com](https://kaledge.kaleidoforge.com) to log in.
+5. 
+6. ### Pull and run
+7. 
+8. ```bash
+9. docker pull ghcr.io/kaleidoforge/kaledge-community:latest
+10. 
+11. docker run -p 8080:8080 ghcr.io/kaleidoforge/kaledge-community:latest
+12. ```
+13. 
+14. Then open your browser at `http://localhost:8080` and log in with your KalEdge account.
+15. 
+16. ---
 
 ## Getting Started
 
