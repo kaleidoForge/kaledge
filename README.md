@@ -25,33 +25,6 @@ Documentation Portal: [GitHub Repository](https://github.com/kaleidoforge/kaledg
 
 ---
 
-## Open-Core Model
-
-KalEdge follows an **Open-Core** distribution strategy:
-
-| Tier | Distribution | Auth | Features |
-|---|---|---|---|
-| **Community** | Docker image (this repo) | Supabase account (free) | Full compression suite, AI Architect (BYOK), hls4ml export |
-| **Pro / Corp** | Institutional delivery | Hardware-bound license | All Community features + FPGA estimators, Build Agent, AI Advisor |
-
----
-1. 
-2. ## Running KalEdge Community (Docker)
-3. 
-4. The Community edition is distributed as a Docker image. It requires a free account at [kaledge.kaleidoforge.com](https://kaledge.kaleidoforge.com) to log in.
-5. 
-6. ### Pull and run
-7. 
-8. ```bash
-9. docker pull ghcr.io/kaleidoforge/kaledge-community:latest
-10. 
-11. docker run -p 8080:8080 ghcr.io/kaleidoforge/kaledge-community:latest
-12. ```
-13. 
-14. Then open your browser at `http://localhost:8080` and log in with your KalEdge account.
-15. 
-16. ---
-
 ## Getting Started
 
 1.  **Register:** Create your free account at [kaledge.kaleidoforge.com](https://kaledge.kaleidoforge.com).
