@@ -3,6 +3,7 @@
 KalEdge is a platform developed by KaleidoForge and designed to bridge the gap between Deep Learning model design and efficient hardware (FPGA) implementation. Powered by **hls4ml**, KalEdge adds layers of automation, AI assisted optimization, and hardware synthesis workflows to make Edge AI accessible to software engineers and hardware designers alike.
 
 Official Cloud Platform: [kaledge.kaleidoforge.com](https://kaledge.kaleidoforge.com)  
+Docker Community Package: [ghcr.io/kaleidoforge/kaledge-community](https://github.com/kaleidoForge/kaledge/pkgs/container/kaledge-community)  
 Documentation Portal: [GitHub Repository](https://github.com/kaleidoforge/kaledge)
 
 <p align="center">
