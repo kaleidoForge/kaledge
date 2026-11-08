@@ -12,6 +12,7 @@ Documentation Portal: [GitHub Repository](https://github.com/kaleidoforge/kaledg
 ## Key Capabilities
 
 *   **Visual Architecture Builder & Model Import:** Design neural networks visually or import pre trained `.h5` and `.keras` models directly for hardware compression.
+*   **Interactive Code Editor (Workbench):** Write and execute custom Python and Keras scripts directly against your loaded dataset (`X_train`, `y_train`, `X_test`, `y_test`), inspect generated plots, and register custom `.h5` models or `.npz` datasets into the KalEdge pipeline.
 *   **AI Architect & AI Advisor:** Leverage session local LLM agents (under a Bring Your Own Key model supporting Anthropic, OpenAI, and Google Gemini) to design hardware ready architectures and evaluate board constraints.
 *   **Comprehensive Compression Suite:**
     *   **Pruning & Quantization Aware Training (QAT):** Minimize weight density and bitwidths using TensorFlow Model Optimization Toolkit and QKeras.
